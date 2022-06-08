@@ -1,0 +1,395 @@
+/* GLOBAL STYLES */
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 10px;
+}
+
+body {
+    width: 100%;
+}
+ul{
+	list-style:none;
+}
+
+p {
+    font-size: 1.6rem;
+    color: var(--grayish-blue);
+    line-height: 1.6;
+}
+
+section {
+    padding: 5rem 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+
+}
+
+/* VARIABLES */
+:root {
+    --dark-blue: hsl(233, 26%, 24%);
+    --lime-green: hsl(136, 65%, 51%);
+    --bright-cyan: hsl(192, 70%, 51%);
+    --grayish-blue: hsl(233, 8%, 62%);
+    --light-grayish-blue: hsl(220, 16%, 96%);
+    --very-light-gray: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
+}
+
+/* UTILITY CLASSES */
+.u-mb-small {
+    margin-bottom: 1.6rem;
+}
+
+.u-mb-medium {
+    margin-bottom: 3rem;
+}
+
+.u-mb-large {
+    margin-bottom: 5rem;
+}
+
+/********** HEADER STYLES ***********/
+/********** HEADER STYLES ***********/
+/********** HEADER STYLES ***********/
+
+header {
+    width: 100%;
+    height: 7.5rem;
+    padding: 2.5rem 0;
+    background-color: var(--white);
+    position: relative;
+    z-index: 9999999;
+}
+
+.logo {
+    height: 2.3rem;
+}
+
+.check {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-ul li {
+    list-style: none;
+    margin: 0 1.5rem;
+} 
+
+li a {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: var(--grayish-blue);
+    padding-bottom: 2rem;
+    position: relative;
+}
+
+li a:hover {
+    color: var(--dark-blue);
+}
+
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: .3rem;
+    background: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all .3s;
+}
+
+nav ul li a:hover::before {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.btn {
+    font-size: 1.5rem;
+    color: var(--white);
+    font-weight: 700;
+    text-decoration: none;
+    padding: 1.3rem 3rem;
+    background: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
+    border-radius: 5rem;
+    opacity: 1;
+    transform: scaleX(1);
+    transition: all .2s;
+}
+
+.btn:hover {
+    opacity: .8;
+    transform: scaleX(1.1);
+}
+
+
+/********** WELCOME SECTION **********/
+/********** WELCOME SECTION **********/
+/********** WELCOME SECTION **********/
+
+.welcome-section {
+    width: 100%;
+    background-color: var(--very-light-gray);
+    height:75vh; 
+}
+
+.welcome {
+    display: flex;
+
+}
+
+.welcome-image {
+    display: inline-block;
+    text-align: center;
+}
+
+.welcome-image::before {
+    content: "";
+    position: absolute;
+    top: -12rem;
+    right: 0px;
+    width: 60rem;
+    height: 70rem;
+    background-image: url(./images/bg-intro-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.welcome-image img {
+    width: 80%;
+    transform:translate(15rem, -15rem);
+
+}
+
+.welcome-text{
+	max-width:450px;
+}
+
+.welcome-text h1 {
+    font-size: 5.5rem;
+    font-weight:500;
+    color: var(--dark-blue);
+    line-height: 5.5rem;
+}
+
+.welcome-text h1 span {
+    display: inline-block;
+}
+
+.bank-choice{
+	margin-top:5%;
+}
+.bank-text{
+	max-width:500px;
+}
+.bank-text h2{
+	font-size:3.5rem;
+	font-weight: 500;
+	line-height:4.5rem;
+}
+.bank-content{
+	display:grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	margin-top:5%;
+	gap:1.5rem;
+}
+
+.ball{
+	width:50px;
+	height:50px;
+	border-radius:50%;
+	display:block;
+	margin-bottom:20px;
+
+}
+.ball img{
+	width:100%;
+}
+
+.content-item h2{
+	line-height:4.5rem;
+}
+
+
+
+.article{
+    margin-top:10%;
+}
+.article h1{
+     margin-bottom:25px;
+}
+.article-box{
+	position: relative;
+	height:350px;
+	width:250px;
+	background-color:var(--light-grayish-blue);
+	border-radius:5px;
+
+}
+.article-box img{
+	height:50%;
+	width:100%;
+	border-radius:5px;
+}
+.article-content{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap:1.5rem;
+}
+
+.article-text p{
+	color:var( --dark-blue);
+
+}
+.article-text{
+	height:50%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+}
+
+
+footer{
+	margin:5% 0px 0px 0px;
+	width:100%;
+	height:120px;
+	background-color: var( --dark-blue);
+	padding:15px 0px 15px 0px;
+}
+.footer-container{
+	display:grid;
+	grid-template-columns:repeat(5,1fr);
+	justify-items: center;
+
+}
+.media{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.social ul{
+	display: flex;
+	gap:1rem;
+}
+
+.button-item{
+	grid-column:5/5;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap:1rem;
+}
+
+
+
+
+/*==========style=============*/
+
+
+.text-item p:hover, .button-item p:hover{
+	color:var(--lime-green);
+	cursor: pointer;
+}
+
+.article-container{
+	
+}
+
+
+
+
+/*================MEDIA=====================*/
+@media (max-width:991px){
+
+
+  .btn{
+  	display:none;
+  }
+
+.hamburger {
+    display: block;
+}
+
+     nav{   
+           
+          }
+         .nav-ul {
+         	position: absolute;
+         	top:150%;
+           	left:20%;
+          	display:flex;
+          	flex-direction: column;
+          	gap:3rem;
+          	background-color: var( --light-grayish-blue);
+          	width:60%;
+          	height:300px;
+          	z-index:9999999999;
+          	visibility:hidden;
+          	transition:.5s;
+
+          	
+          }
+          #toggle:checked ~ .nav-ul{
+          	visibility: visible;
+          	 animation: moveDown .6s 1 linear;
+          }
+           
+           #toggle:checked ~ .nav-ul{
+          	visibility: visible;
+          	 animation: moveUp .6s 1 linear;
+          }
+
+
+@keyframes moveDown {
+    0% {
+         	top:0%;
+    }
+
+    100% {
+         	top:150%;
+    }
+}
+
+
+
+
+
+
+
+/********** WELCOME SECTION **********/
+/********** WELCOME SECTION **********/
+/********** WELCOME SECTION **********/
+
